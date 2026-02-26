@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold: #F5C842;
+  --gold-dark: #D4A017;
+  --amber: #FF9500;
+  --bg: #0F0E0A;
+  --surface: #1A1814;
+  --surface2: #242018;
+  --text: #F0EAD6;
+  --muted: #7A7060;
+  --green: #4ADE80;
+  --red: #F87171;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+}
+
+.font-syne { font-family: 'Syne', sans-serif; }
