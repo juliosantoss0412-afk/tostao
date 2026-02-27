@@ -1,5 +1,5 @@
 'use client'
-import { useState, use } from 'react'
+import { useState } from 'react'
 import { supabase } from '@/lib/supabase'
 import { useRouter } from 'next/navigation'
 
@@ -96,8 +96,8 @@ const LESSONS: Record<string, {
   }
 }
 
-export default function LessonPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params)
+export default function LessonPage({ params }: { params: { id: string } }) {
+  const { id } = params
   const lesson = LESSONS[id]
   const [step, setStep] = useState(0)
   const [selectedOption, setSelectedOption] = useState<number | null>(null)
@@ -299,3 +299,4 @@ export default function LessonPage({ params }: { params: Promise<{ id: string }>
     </div>
   )
 }
+
